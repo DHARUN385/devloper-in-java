@@ -1,0 +1,51 @@
+package java123;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class mergeSortRemoveDuplicates {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements for the first array: ");
+        int size1 = scanner.nextInt();
+        int[] array1 = new int[size1];
+        System.out.println("Enter " + size1 + " integers for the first array:");
+        for (int i = 0; i < size1; i++) {
+            array1[i] = scanner.nextInt();
+        }
+
+        System.out.print("Enter the number of elements for the second array: ");
+        int size2 = scanner.nextInt();
+        int[] array2 = new int[size2];
+        System.out.println("Enter " + size2 + " integers for the second array:");
+        for (int i = 0; i < size2; i++) {
+            array2[i] = scanner.nextInt();
+        }
+
+        scanner.close();
+
+        int[] result = mergeSortRemoveDuplicates(array1, array2);
+
+        System.out.println("The merged ,Sorted and duplicated array is:");
+     
+        System.out.println(Arrays.toString(result)); 
+    }
+
+    public static int[] mergeSortRemoveDuplicates(int[] array1, int[] array2) {
+        int[] mergedArray = new int[array1.length + array2.length];
+        System.arraycopy(array1, 0, mergedArray, 0, array1.length);
+        System.arraycopy(array2, 0, mergedArray, array1.length, array2.length);
+
+        Arrays.sort(mergedArray);
+
+        Set<Integer> uniqueElements = Arrays.stream(mergedArray)
+                                            .boxed()
+                                            .collect(Collectors.toSet());
+
+        return uniqueElements.stream()
+                             .mapToInt(Integer::intValue)
+                             .toArray();
+    }
+}
