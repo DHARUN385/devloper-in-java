@@ -1,0 +1,29 @@
+import java.util.*;
+public class NumberConversion {
+
+    public static int binaryToDecimal(String binary) {
+        return Integer.parseInt(binary, 2);
+    }
+
+    public static String decimalToBinary(int decimal) {
+        return Integer.toBinaryString(decimal);
+    }
+
+    public static String decimalToOctal(int decimal) {
+        return Integer.toOctalString(decimal);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String binary = sc.nextLine();
+        int decimal =sc.nextInt();
+        int decimalFromBinary = binaryToDecimal(binary);
+        System.out.println("Binary " + binary + " to Decimal is: " + decimalFromBinary);
+
+        String binaryFromDecimal = decimalToBinary(decimal);
+        System.out.println("Decimal " + decimal + " to Binary is: " + binaryFromDecimal);
+
+        String octalFromDecimal = decimalToOctal(decimal);
+        System.out.println("Decimal " + decimal + " to Octal is: " + octalFromDecimal);
+    }
+}
