@@ -1,0 +1,40 @@
+package oops;
+import java.util.*;
+class student{
+	String name;
+	int age;
+	int rollno;
+	String dept;
+	String email;
+	void display() {
+		System.out.println(name);
+		System.out.println(age);
+		System.out.println(rollno);
+		System.out.println(email);
+		System.out.println(dept);
+	}
+}
+public class studentdetails {
+	public static void main(String[] args) {
+		System.out.print("Enter your name:");
+		Scanner sc = new Scanner(System.in);
+		student a= new student();
+		a.name = sc.nextLine();
+		
+		System.out.print("Enter your age:");
+		a.age = sc.nextInt();
+		
+		System.out.print("Enter your roolno:");
+		a.rollno = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.print("Enter your dept:");
+		a.dept = sc.nextLine();
+		
+		
+		System.out.print("Enter your email:");
+		a.email = sc.nextLine();
+		a.display();
+	}
+
+}
