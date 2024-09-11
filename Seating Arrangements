@@ -1,0 +1,88 @@
+package java123;
+import java.util.Scanner;
+
+public class seatingarrangement {
+
+    public static void main(String[] args) {
+        System.out.println("Chennai Express");
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter seat number: ");
+        int seatNumber = sc.nextInt();
+        
+        int compartmentNumber = (seatNumber - 1) / 8 + 1; 
+        
+        if (seatNumber < 1 || seatNumber > 72) {
+            System.out.println("Invalid seat number. Please enter a number between 1 and 72.");
+        } else {
+            if (compartmentNumber == 1) {
+                if (seatNumber >= 1 && seatNumber <= 8) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 1 and 8 for compartment 1.");
+                }
+            } 
+            else if (compartmentNumber == 2) {
+                if (seatNumber >= 9 && seatNumber <= 16) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 9 and 16 for compartment " + compartmentNumber + ".");
+                }
+            } 
+             else if (compartmentNumber == 3) {
+                if (seatNumber >= 17 && seatNumber <= 24) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 17 and 24 for compartment " + compartmentNumber + ".");
+                }
+            } 
+             else if (compartmentNumber == 4) {
+                if (seatNumber >= 25 && seatNumber <= 32) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 25 and 32 for compartment " + compartmentNumber + ".");
+                }
+            } 
+             else if (compartmentNumber == 5) {
+                if (seatNumber >= 33 && seatNumber <= 40) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 33 and 40 for compartment " + compartmentNumber + ".");
+                }
+            } 
+             else if (compartmentNumber == 6) {
+                if (seatNumber >= 41 && seatNumber <= 48) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 41 and 48 for compartment " + compartmentNumber + ".");
+                }
+            } 
+             else if (compartmentNumber == 7) {
+                if (seatNumber >= 49 && seatNumber <= 56) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 49 and 56 for compartment " + compartmentNumber + ".");
+                }
+            } 
+             else if (compartmentNumber == 8) {
+                if (seatNumber >= 57 && seatNumber <= 64) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 57 and 64 for compartment " + compartmentNumber + ".");
+                }
+            } 
+             else if (compartmentNumber == 9) {
+                if (seatNumber >= 65 && seatNumber <= 72) {
+                    System.out.println("Seat " + seatNumber + " is available in compartment " + compartmentNumber + ".");
+                } else {
+                    System.out.println("Invalid seat number. Please enter a number between 65 and 72 for compartment " + compartmentNumber + ".");
+                }
+            } 
+            else {
+                System.out.println("Invalid compartment number. Please enter a seat number between 1 and 72.");
+            }
+        }
+        
+        sc.close();
+    }
+}
