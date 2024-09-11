@@ -1,0 +1,22 @@
+package oops;
+public class Tamil {
+    int number;
+    String name;
+    int age;
+
+    Tamil(int number, int age, String name) {
+        this.number = number;
+        this.age = age;
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println(number + " " + age + " " + name);
+    }
+
+    public static void main(String[] args) {
+        Tamil t = new Tamil(123, 20, "foodie");
+        t.display();
+     
+    }
+}
