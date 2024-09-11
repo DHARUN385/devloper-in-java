@@ -1,0 +1,13 @@
+package java123;
+import java.util.Scanner;
+public class Asciivalues {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+        for (int i = 0; i < text.length(); i++) {
+            char character = text.charAt(i);
+            int asciiValue = (int) character;
+            System.out.println("The ASCII value of '" + character + "' is: " + asciiValue);
+        }
+    }
+}
