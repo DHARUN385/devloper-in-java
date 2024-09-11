@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class PanagramChecker {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String sentence = scanner.nextLine();
+        
+        if (isPangram(sentence)) {
+            System.out.println("The sentence is a pangram.");
+        } else {
+            System.out.println("The sentence is not a pangram.");
+        }
+        
+        scanner.close();
+    }
+
+    public static boolean isPangram(String sentence) {
+        HashSet<Character> letters = new HashSet<>();
+        
+        sentence = sentence.toLowerCase();
+        
+        for (char ch : sentence.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                letters.add(ch);
+            }
+        }
+        
+        return letters.size() == 26;
+    }
+}
