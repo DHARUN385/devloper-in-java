@@ -1,0 +1,24 @@
+package java123;
+
+import java.util.*;
+import java.util.Scanner;
+
+public class Email {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter email address:");
+        String email = sc.nextLine();
+       String domain = extractDomain(email);
+       System.out.println("Domain: " + domain);
+    }
+
+    public static String extractDomain(String email) {
+        if (email == null || email.indexOf('@') == -1) {
+            throw new IllegalArgumentException("Invalid email address");
+        }
+
+        int atIndex = email.indexOf('@');
+        return email.substring(atIndex + 1);
+    }
+}
