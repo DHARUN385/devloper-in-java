@@ -1,0 +1,25 @@
+package oops;
+
+class phone{
+	phone(){
+		System.out.print("super class called here...");
+	}
+	void makeCall(){
+		System.out.print("Class Calling...");
+	}
+}
+class Buttonphone extends phone{
+	Buttonphone(){
+		super();//parent class
+	}
+	void pressButton() {
+		this.makeCall();
+	}
+}
+public class inheritance {
+	public static void main(String[] args) {
+		Buttonphone b= new Buttonphone();
+		b.pressButton();
+	}
+
+}
